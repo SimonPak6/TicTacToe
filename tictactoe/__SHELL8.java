@@ -1,5 +1,5 @@
 package tictactoe;
-public class __SHELL3 extends bluej.runtime.Shell {
+public class __SHELL8 extends bluej.runtime.Shell {
 public static void run() throws Throwable {
 
 java.lang.String[] __bluej_param0 = { };

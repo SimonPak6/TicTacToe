@@ -96,6 +96,7 @@ public class UI
 
     public void printMove(State state, int row, int col) {
         System.out.printf(Constants.PRINT_MOVE, getXOrO(state.getWhoseMove()), getPlayerName(state.getWhoseMove(), state.getXName(), state.getOName()), row, col);
+        System.out.println();
     } 
 
     public void printWinner(State state) {
