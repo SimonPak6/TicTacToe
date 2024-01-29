@@ -14,7 +14,7 @@ public class UI
     }
        // Utility methods
     public String getXOrO(int whoseMove) {
-        if(whoseMove == 1){
+        if(whoseMove == -1){
             return "X";
         } else if (whoseMove == 1){
             return "O";
@@ -31,7 +31,7 @@ public class UI
     public boolean isLegalMove(State state, int row, int col) {
         return 1 <= row && row <= Constants.BOARD_SIZE &&
         1 <= col && col <= Constants.BOARD_SIZE &&
-        state.getBoardCell(row, col) == Constants.BLANK;
+        state.getBoardCell(row -1, col-1) == Constants.BLANK;
     }
 
     // Prompt for input methods
@@ -69,7 +69,7 @@ public class UI
     public boolean startNewGame() {
         System.out.println(Constants.START_NEW_GAME);
         String yesOrNo = scanner.next();
-        return yesOrNo == "T";
+        return yesOrNo.equals("Y") || yesOrNo.equals("y");
     }
 
     // Printing text methods
