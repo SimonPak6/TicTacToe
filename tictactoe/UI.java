@@ -8,7 +8,7 @@ public class UI
 {
 
     Scanner scanner;
-
+    State state = new State();
     public UI() {
         scanner = new Scanner(System.in);         
     }
@@ -69,7 +69,12 @@ public class UI
     public boolean startNewGame() {
         System.out.println(Constants.START_NEW_GAME);
         String yesOrNo = scanner.next();
-        return yesOrNo.equals("Y") || yesOrNo.equals("y");
+        if (yesOrNo.equalsIgnoreCase("Y")){
+            state.reset();
+            return true;
+        } else{
+            return false;
+        }
     }
 
     // Printing text methods

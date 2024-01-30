@@ -78,6 +78,10 @@ public class State
     public void setBoardCell(int row, int col, int value) {
         this.board[row][col] = value;
     }
-
+    
+    public void reset(){
+        gameState = Constants.STANDBY;
+        board = new int[Constants.BOARD_SIZE][Constants.BOARD_SIZE];
+    }
 }
 
