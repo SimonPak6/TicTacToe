@@ -48,6 +48,8 @@ public class UI
                 row = scanner.nextInt();
             } catch (Exception e) {
                 System.out.println(Constants.INVALID_ROW_OR_COLUMN);
+                scanner.next();
+                continue;
             }
         }
         return row;
@@ -61,6 +63,8 @@ public class UI
                 col = scanner.nextInt();
             } catch (Exception e) {
                 System.out.println(Constants.INVALID_ROW_OR_COLUMN);
+                scanner.next();
+                continue;
             }
         }
         return col;
